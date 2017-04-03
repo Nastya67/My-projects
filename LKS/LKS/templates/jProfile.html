@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Reg</title>
+    <link href="{{url_for('static', filename = 'Style.css')}}" rel="stylesheet" media="all"/>
+    <script src="{{url_for('static', filename = 'Client.js')}}"></script>
+
+  </head>
+  <body>
+    <h1>Hello, {{user['name']}}</h1>
+    <p>
+      <a href='{{url_for("jComand")}}'><button class='buttom'>Qualifying round</button></a>
+      <a href='{{url_for("jfComand")}}'><button class='buttom'>Final round</button></a>
+    </p>
+    {%if finalComands%}
+    <h4>Final round</h4>
+    <table border="1">
+      <tr>
+        <th><div class="vertical-text">Comand</div></th>
+        <th>T</th>
+        <th>D</th>
+        <th>T</th>
+        <th>A</th>
+        <th>M</th>
+        <th>S</th>
+        <th>C</th>
+        <th class="sum">=</th>
+      </tr>
+    {%for jud in finalComands%}
+      <tr>
+        <td>{{jud['name']}}</td>
+        <td> {{jud['technique']}}</td>
+        <td>{{jud['production']}}</td>
+        <td>{{jud['teamwork']}}</td>
+        <td>{{jud['artistry']}}</td>
+        <td>{{jud['musicality']}}</td>
+        <td>{{jud['show']}}</td>
+        <td>{{jud['creativity']}}</td>
+        <td class="sum">{{jud['sum']}}</td>
+        <td><a href="{{url_for('fupdate', id = jud['comand_id'])}}"><button class='buttom2'>
+          <img src="{{url_for('static', filename = 'change.png')}}" width='20px'/>
+        </button></a></td>
+      </tr>
+      {%endfor%}
+    </table>
+    {%endif%}
+    {%if comands%}
+    <h4>Qualifying round</h4>
+    <table border="1">
+      <tr>
+        <th><div class="vertical-text">Comand</div></th>
+        <th>T</th>
+        <th>D</th>
+        <th>T</th>
+        <th>A</th>
+        <th>M</th>
+        <th>S</th>
+        <th>C</th>
+        <th class="sum">=</th>
+      </tr>
+    {%for jud in comands%}
+      <tr>
+        <td>{{jud['name']}}</td>
+        <td> {{jud['technique']}}</td>
+        <td>{{jud['production']}}</td>
+        <td>{{jud['teamwork']}}</td>
+        <td>{{jud['artistry']}}</td>
+        <td>{{jud['musicality']}}</td>
+        <td>{{jud['show']}}</td>
+        <td>{{jud['creativity']}}</td>
+        <td class="sum">{{jud['sum']}}</td>
+        <td><a href="{{url_for('update', id = jud['comand_id'])}}"><button class='buttom2'>
+        <img src="{{url_for('static', filename = 'change.png')}}" width='20px'/></button></a></td>
+      </tr>
+    {%endfor%}
+  </table>
+  {%endif%}
+  </body>
+</html>

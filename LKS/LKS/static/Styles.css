@@ -1,0 +1,47 @@
+body{
+  color: rgb(242, 238, 227);
+  background: rgb(52, 50, 54);
+  font-family: Arial;
+}
+.titles{
+  margin: 250px 0 50px 0;
+  text-align: center;
+  font-size: 100px;
+  color: rgb(235, 240, 1);
+}
+.textbox{
+  color: rgb(47, 47, 47);
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 50px;
+  margin: 25px 0 25px 20px;
+  width: 250px;
+}
+td{
+  font-size: 60px;
+  font-weight: bold;
+}
+.buttom{
+  background: rgb(159, 187, 22);
+  padding: 10px 60px;
+  border: 2px solid rgb(242, 238, 227);
+  border-radius: 15px;
+  color: rgb(242, 238, 227);
+  font-size: 50px;
+  margin: 70px 20px 10px 0;
+}
+.bottom:hover {
+  border: solid lime;
+  color:lime;
+  font-weight: bold;
+}
+
+.login{
+  margin: auto;
+  text-align: center;
+}
+.login2{
+  margin: auto;
+
+}

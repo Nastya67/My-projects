@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- Начинается fancybox-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Заканчивается fancybox-->
+</head>
+<body>
+<div class="wrap">
+<div class="header">
+<h1>Old Gentleman</h1>
+<img src="images/logo.png"/>
+</div>
+<!-- end header -->
+<div class="sidebar">
+<ul>
+<li><a href="index.html">Фото джентельменов</a></li>
+<li><a href="vidi.html">Виды Лондона</a></li>
+<li><a href="mosti.html">Мосты Лондона</a></li>
+</ul>
+</div>
+<!-- end sidebar -->
+<div class="main">
+<a class="fancybox" rel="group" href="images/1.jpg"><img src="images/1.jpg" class="foto"/></a> <!-- rel="group" групируют все картиночки -->
+<a class="fancybox" rel="group" href="images/2.jpg"><img src="images/2.jpg" class="foto"/></a>
+<a class="fancybox" rel="group" href="images/3.jpg"><img src="images/3.jpg" class="foto"/></a>
+<a class="fancybox" rel="group" href="images/4.jpg"><img src="images/4.jpg" class="foto"/></a>
+<a class="fancybox" rel="group" href="images/5.jpg"><img src="images/5.jpg" class="foto"/></a>
+<a class="fancybox" rel="group" href="images/6.jpg"><img src="images/6.jpg" class="foto"/></a>
+<a class="fancybox" rel="group" href="images/7.jpg"><img src="images/7.jpg" class="foto"/></a>
+<a class="fancybox" rel="group" href="images/8.jpg"><img src="images/8.jpg" class="foto"/></a>
+</div>
+<!-- end main -->
+</div>
+
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox(); <!-- ".fancybox" - имя класса ссылочки на картинки -->
+	});
+</script>
+</html>

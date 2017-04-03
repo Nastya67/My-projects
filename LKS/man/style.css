@@ -1,0 +1,84 @@
+html,body,p,img,h1,div{
+	margin:0;
+	padding:0;
+}
+body{
+	background:url('images/bg.jpg')
+}
+.wrap{
+	max-width:1200px;
+	background:rgba(255,255,255,0.7);
+	margin:0 auto;
+}
+.header{
+	text-align:center;
+	min-height:100px;
+	width:100%;
+}
+h1{
+	display:none;
+}
+.sidebar{
+	width:30%;
+	/* background:yellow; */
+	float:left;
+}
+.main{
+	width:65%;
+	/* background:pink; */
+	margin-left:35%;
+}
+.foto{
+	width:30%;
+	border-radius:2px;
+	margin:2% 0 0 2%;
+}
+.foto2{
+	width:40%;
+	border-radius:2px;
+	margin:2% 0 0 2%;
+}
+a{
+	text-decoration:none;
+}
+@media screen and (max-width: 640px){
+	.header img{
+	width:150px;}
+	
+	.sidebar{
+	width:100%;
+	float:none;	}
+	
+	.main{
+		width:100%;
+		margin-left:0;}
+		
+	.foto{
+		width:47%;
+		margin:2% 0 2% 2%;
+	}	
+		.foto2{
+		width:95%;
+	}
+	}
+@media screen and (max-width: 480px){
+	.header img{
+		display:none; /* убираем картинку */	
+		}
+	h1{
+		display:block;
+	}
+	.header{
+		min-height:40%;
+	}
+	.foto{
+		width:95%;
+	}
+	
+	
+}	
+	
+
+
+
+

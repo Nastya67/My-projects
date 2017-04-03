@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="utf-8">
+    <link href="{{url_for('static', filename = 'Styles.css')}}"  rel="stylesheet" media="all"/>
+    <script src="{{url_for('static', filename = 'Client.js')}}"></script>
+    <title="Home page"/>
+
+  </head>
+  <body>
+    <h1 class="titles">Log in</h1>
+    <form class="login" method="post" id="log_form"><!--менять названия класса можешь-->
+      <table class="login2"><!--тоже можешь -->
+        <tr id="log1"> <!-- нельзя менять название-->
+          <td>{{form.login.label}}</td>
+          <td>{{form.login(class='textbox')}}</td>
+        </tr>
+        <tr id="log2"><!--тоже нельзя менять-->
+          <td>{{form.password.label}}</td>
+          <td>{{form.password(class='textbox')}}</td>
+        </tr>
+      </table>
+      <input type="button" onclick="valid(this.form)" value="Log in" class='buttom'>
+      {{ form.csrf_token }}
+    </form>
+  </body>
+</html>
